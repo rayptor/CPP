@@ -1,5 +1,3 @@
-// g++-14 -fsanitize=address -g -march=tigerlake -flto=auto -O3 -mstore-max=512 -floop-parallelize-all -fprefetch-loop-arrays -ftree-vectorize -std=gnu++23 -pedantic -Wall -lm main.cpp -o main
-// -I/usr/local/Cellar/boost/1.86.0_2/include/ -I/usr/local/Cellar/python@3.13/3.13.0_1/Frameworks/Python.framework/Headers/ 
 // g++-14 -march=native -flto=auto -O3 -mstore-max=512 -ftree-vectorize -std=gnu++23 -pedantic -Wall -lm -fdiagnostics-all-candidates main.cpp -o main
 #include <cstdint>
 #include <iostream>
@@ -37,13 +35,6 @@ namespace conversion {
         return radian * T(180) / (std::numbers::pi);
     }
 }
-
-// https://www.andre-gaschler.com/rotationconverter/
-// https://cours.etsmtl.ca/gpa546/Applets/Orient3D.html
-// https://www.ncbi.nlm.nih.gov/pmc/articles/PMC9648712/
-// https://quaternions.online
-// https://danceswithcode.net/engineeringnotes/quaternions/conversion_tool.html
-// https://danceswithcode.net/engineeringnotes/quaternions/quaternions.html
 
 // struct Quaterreur : public std::exception {
 //     const std::string laquelle() noexecpt {
